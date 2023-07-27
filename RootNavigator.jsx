@@ -1,16 +1,24 @@
 import React from 'react'
+import {View, Text, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Stack1 from './stacks/stack1';
+
 
 const Tab = createBottomTabNavigator();
 
 const RootNavigator = () => {
   return (
-        <Tab.Navigator>
-            <Tab.Screen name='first stack' component={Stack1}/>
-        </Tab.Navigator>
+        <View style={styles.container}>
+            <Text>I hate REact Native</Text>
+        </View>
     )
 }
 
 export default RootNavigator
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+})
