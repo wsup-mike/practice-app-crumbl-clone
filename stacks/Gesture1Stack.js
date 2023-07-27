@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Gesture1Screen from "./Gesture1Screen";
+import Gesture1Screen from "../screens/Gesture1Screen";
 
 const Stack = createStackNavigator();
 

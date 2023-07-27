@@ -1,8 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Gesture1Stack from './Gesture1Stack';
-
+import Gesture1Stack from './stacks/Gesture1Stack';
 
 const Tab = createBottomTabNavigator();
 
