@@ -4,8 +4,8 @@ import React from 'react'
 const Gesture1Screen = () => {
   return (
     // <View style={{flex: 1,  alignItems: 'center', justifyContent: 'center'}}>
-    <View classname='bg-slate-500'>
-      <Text style={{ fontSize: 30 }}>Gesture1Screen</Text>
+    <View classname='flex-1 bg-slate-500 justify-center'>
+      <Text classname='text-3xl text-center'>Gesture1Screen</Text>
     </View>
   )
 }
