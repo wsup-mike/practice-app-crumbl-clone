@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 const Gesture1Stack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Gesture1" component={Gesture1Screen} />
     </Stack.Navigator>
   );
