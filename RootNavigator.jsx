@@ -11,8 +11,12 @@ const Tab = createBottomTabNavigator();
 
 const RootNavigator = () => {
   return (
-        <Tab.Navigator>
+        <Tab.Navigator initialRouteName='Gesture1Stack'>
             <Tab.Screen name='Gesture1Stack' component={Gesture1Stack}/>
+            <Tab.Screen name='Gesture2Stack' component={Gesture2Stack}/>
+            <Tab.Screen name='Gesture3Stack' component={Gesture3Stack}/>
+            <Tab.Screen name='Gesture4Stack' component={Gesture4Stack}/>
+            <Tab.Screen name='Gesture5Stack' component={Gesture5Stack}/>
         </Tab.Navigator>
     )
 }
