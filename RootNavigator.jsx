@@ -1,15 +1,16 @@
 import React from 'react'
 import {View, Text, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Gesture1Stack from './Gesture1Stack';
 
 
 const Tab = createBottomTabNavigator();
 
 const RootNavigator = () => {
   return (
-        <View style={styles.container}>
-            <Text>I hate REact Native</Text>
-        </View>
+        <Tab.Navigator>
+            <Tab.Screen name='Gesture1Stack' component={Gesture1Stack}/>
+        </Tab.Navigator>
     )
 }
 
