@@ -6,19 +6,11 @@ const Tab = createBottomTabNavigator();
 
 const RootNavigator = () => {
   return (
-        <View style={styles.container}>
-            <Text>The Root</Text>
-        </View>
+        <Tab.Navigator>
+
+        </Tab.Navigator>
     )
 }
 
 export default RootNavigator
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-  });
