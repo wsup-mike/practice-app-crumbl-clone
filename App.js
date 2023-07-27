@@ -5,7 +5,11 @@ import "react-native-gesture-handler";
 import RootNavigator from "./RootNavigator";
 
 export default function App() {
-  return <NavigationContainer></NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
