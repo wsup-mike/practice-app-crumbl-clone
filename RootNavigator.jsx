@@ -1,14 +1,13 @@
+
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { StatusBar } from 'expo-status-bar'
 
 const RootNavigator = () => {
   return (
-    <View>
-        <Text style={styles.container}>The Root</Text>
-        <StatusBar style="auto" />
-      </View>
-  )
+        <View style={styles.container}>
+            <Text>The Root</Text>
+        </View>
+    )
 }
 
 export default RootNavigator
