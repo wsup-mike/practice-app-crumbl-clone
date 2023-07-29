@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, Pressable, Animated } from 'react-native'
 import React from 'react'
 
 const Gesture3Screen = () => {
