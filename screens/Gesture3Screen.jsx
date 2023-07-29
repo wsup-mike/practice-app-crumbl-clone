@@ -46,8 +46,9 @@ const Gesture3Screen = () => {
             })},
           ],
           backgroundColor: translation.interpolate({
-            inputRange: [0, 300],
-            outputRange: ['red', 'blue'],
+            inputRange: [25, 300, 25],
+            outputRange: ['red', 'blue', 'red'],
+            extrapolate: 'clamp'
           })
           // opacity: translation.interpolate({
           //   inputRange: [0, 300],
