@@ -1,7 +1,9 @@
 import { View, Text, SafeAreaView, Pressable, Animated } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Gesture3Screen = () => {
+
+  const translation = useRef(new Animated.Value(0)).current
 
   const animation = () => {
 
