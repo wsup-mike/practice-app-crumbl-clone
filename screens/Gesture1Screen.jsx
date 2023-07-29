@@ -9,12 +9,12 @@ const Gesture1Screen = () => {
   const toggleBox = () => {
     const targetValue = animated ? 300 : 0;
     
-    Animated.spring(translation, {
+    Animated.spring(translation2, {
       toValue: targetValue,
       useNativeDriver: true,
-    }).start(() => {
-      setAnimated(!animated)
-    })
+    }).start()
+
+    setAnimated(!animated)
   }
 
   useEffect(() => {
@@ -40,12 +40,18 @@ const Gesture1Screen = () => {
 
     <Text className='text-center text-xl font-extralight text-white mt-3 ml-3'>Or Press to activate animation: L - R 300</Text>
     {/* <View className='w-32 h-12 bg-red-400 rounded-lg justify-center self-center'><Text className='text-center text-white'>Tap to Animate</Text></View> */}
-    <Button title='Tap to Animate' onPress={() => {
+    {/* <Button title='Tap to Animate' onPress={() => {
       Animated.timing(translation2, {
         toValue: 300,
         useNativeDriver: true,
       }).start()
-    }} />
+    }} /> */}
+
+    <Button 
+      title='Tap to Animate Back or Forth'
+      onPress={toggleBox}
+    />
+
     <Animated.View 
       className='w-14 h-14 bg-teal-500 mt-3 ml-3'
       style={{
