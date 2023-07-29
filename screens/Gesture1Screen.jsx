@@ -1,10 +1,15 @@
 import { View, Text, SafeAreaView, Animated, Pressable, Button } from 'react-native'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Gesture1Screen = () => {
-
+  const [animated, setAnimated] = useState(true)
   const translation = useRef(new Animated.Value(0)).current
   const translation2 = useRef(new Animated.Value(0)).current
+
+  const toggleBox = () => {
+    
+    setAnimated(!animated)
+  }
 
   useEffect(() => {
     Animated.timing(translation, {
