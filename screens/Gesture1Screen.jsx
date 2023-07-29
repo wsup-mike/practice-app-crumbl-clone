@@ -7,8 +7,14 @@ const Gesture1Screen = () => {
   const translation2 = useRef(new Animated.Value(0)).current
 
   const toggleBox = () => {
+    const targetValue = animated ? 300 : 0;
     
-    setAnimated(!animated)
+    Animated.spring(translation, {
+      toValue: targetValue,
+      useNativeDriver: true,
+    }).start(() => {
+      setAnimated(!animated)
+    })
   }
 
   useEffect(() => {
