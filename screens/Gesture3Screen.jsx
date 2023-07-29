@@ -46,7 +46,7 @@ const Gesture3Screen = () => {
             })},
           ],
           backgroundColor: translation.interpolate({
-            inputRange: [25, 300, 25],
+            inputRange: [25, 125, 300],
             outputRange: ['red', 'blue', 'red'],
             extrapolate: 'clamp'
           })
