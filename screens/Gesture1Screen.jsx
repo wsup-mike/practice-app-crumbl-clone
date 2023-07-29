@@ -1,8 +1,10 @@
 import { View, Text, SafeAreaView, Animated } from 'react-native'
 import React, { useRef } from 'react'
-import { Button } from 'react-native';
 
 const Gesture1Screen = () => {
+
+  const translation = useRef(new Animated.Value(0)).current
+  
   return (
   <SafeAreaView className='flex-1 bg-lime-400'>
     <View className=''>
