@@ -43,8 +43,12 @@ const Gesture3Screen = () => {
             { rotate: translation.interpolate({
               inputRange: [0, 300],
               outputRange: ['0deg', '720deg'],
-            })}
+            })},
           ],
+          backgroundColor: translation.interpolate({
+            inputRange: [0, 300],
+            outputRange: ['red', 'blue'],
+          })
           // opacity: translation.interpolate({
           //   inputRange: [0, 300],
           //   outputRange: [1, 0],
