@@ -6,11 +6,19 @@ const Gesture3Screen = () => {
   const translation = useRef(new Animated.Value(0)).current
 
   const animation = () => {
-    Animated.timing(translation, {
-      toValue: 350,
-      useNativeDriver: true,
-      duration: 1000,
-    })
+    Animated.parallel([
+      Animated.timing(translation, {
+        toValue: 300,
+        useNativeDriver: true,
+        duration: 1000,
+      }),
+
+      // Animated.timing(translation, {
+      //   toValue: 300,
+      //   useNativeDriver: true,
+      //   duration: 1000,
+      // })
+    ]).start()
   };
 
   return (
@@ -25,13 +33,23 @@ const Gesture3Screen = () => {
           <Text className='text-center text-white'>Press to see 3 animations in 1</Text>
         </View>
       </Pressable>
+      <Text className='ml-3'>Moves right, rotates and changes opacity!</Text>
 
       <Animated.View 
         className='h-16 w-16 bg-yellow-500 mt-3 ml-3'
         style={{
           transform: [
-            { translateX: translation }
-          ]
+            { translateX: translation },
+            { rotate: translation.interpolate({
+              inputRange: [0, 300],
+              outputRange: ['0deg', '720deg'],
+            })}
+          ],
+          // opacity: translation.interpolate({
+          //   inputRange: [0, 300],
+          //   outputRange: [1, 0],
+          // })
+          
         }}
       />
 
