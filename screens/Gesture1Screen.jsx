@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Animated } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 import { Button } from 'react-native';
 
 const Gesture1Screen = () => {
