@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Animated } from 'react-native'
+import { View, Text, SafeAreaView, Animated, useWindowDimensions } from 'react-native'
 import React, { useRef } from 'react'
 
 const CURSOR_SIDE_SIZE = 20;
@@ -8,6 +8,8 @@ const Gesture4Screen = (props) => {
   const touch = useRef(
     new Animated.ValueXY({ x: 0, y: 0 })
   ).current;
+
+  const dimensions = useWindowDimensions();
 
   return (
     <SafeAreaView className='flex-1 justify-center bg-stone-400'>
