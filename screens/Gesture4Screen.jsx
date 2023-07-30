@@ -15,6 +15,12 @@ const Gesture4Screen = (props) => {
     <SafeAreaView
       className='flex-1 bg-stone-400'
       onStartShouldSetResponder={() => true}
+      onResponderMove={(event) => {
+        touch.setValue({
+          x: event.nativeEvent.locationX,
+          y: event.nativeEvent.locationY,
+        })
+      }}
     >
       <Text className='text-3xl font-extralight text-white text-center mt-3'>Gesture4Screen</Text>
       <View
