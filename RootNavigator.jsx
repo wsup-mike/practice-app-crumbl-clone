@@ -30,3 +30,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     }
 })
+
+const animation = () => {
+    if (animated) {
+      Animated.timing(translation, {
+        toValue: 300,
+        useNativeDriver: true,
+        duration: 1000,
+      })
+      setAnimated(!animated)
+    } else {
+      Animated.timing(translation, {
+        toValue: 0,
+        useNativeDriver: true,
+        duration: 1000,
+      })
+      setAnimated(!animated)
+    } 
+  };

@@ -23,6 +23,7 @@ const Gesture1Screen = () => {
     Animated.timing(translation, {
       toValue: 300,
       useNativeDriver: true,
+      duration: 7000,
     }).start()
   }, []);
 
