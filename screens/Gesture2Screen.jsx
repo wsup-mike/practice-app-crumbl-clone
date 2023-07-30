@@ -37,9 +37,33 @@ const Gesture2Screen = () => {
     }
   }
   
-  // const animation2 = () => {
-  //   if ()
-  // }
+  const animation2 = () => {
+    if (secondAnimated) {
+      Animated.sequence([
+        Animated.spring(translation2.x, {
+          toValue: 300,
+          useNativeDriver: true,
+        }),
+        Animated.spring(translation2.y, {
+          toValue: 70,
+          useNativeDriver: true,
+        }),
+      ]).start()
+      setSecondAnimated(!secondAnimated)
+    } else {
+      Animated.sequence([
+        Animated.spring(translation.y, {
+          toValue: 0,
+          useNativeDriver: true,
+        }),
+        Animated.spring(translation.x, {
+          toValue: 0,
+          useNativeDriver: true,
+        }),
+      ]).start()
+      setSecondAnimated(!secondAnimated)
+    }
+  }
 
   // const animation2 = () => {
   //   Animated.parallel([
