@@ -9,20 +9,31 @@ const Gesture2Screen = () => {
   const translation2 = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
 
   const animation1 = () => {
-    
-
-    Animated.sequence([
-      Animated.spring(translation.x, {
-        toValue: 300,
-        useNativeDriver: true,
-      }),
-      Animated.spring(translation.y, {
-        toValue: 70,
-        useNativeDriver: true,
-      })
-    ]).start()
-
-    
+    if (firstAnimated) {
+      Animated.sequence([
+        Animated.spring(translation.x, {
+          toValue: 300,
+          useNativeDriver: true,
+        }),
+        Animated.spring(translation.y, {
+          toValue: 70,
+          useNativeDriver: true,
+        }),
+      ]).start()
+      setFirstAnimated(!firstAnimated)
+    } else {
+      Animated.sequence([
+        Animated.spring(translation.y, {
+          toValue: 0,
+          useNativeDriver: true,
+        }),
+        Animated.spring(translation.x, {
+          toValue: 0,
+          useNativeDriver: true,
+        }),
+      ]).start()
+      setFirstAnimated(!firstAnimated)
+    }
   }
   
   const animation2 = () => {
