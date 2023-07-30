@@ -6,7 +6,7 @@ const CURSOR_HALF_SIDE_SIZE = CURSOR_SIDE_SIZE / 2;
 
 const Gesture4Screen = (props) => {
   const touch = useRef(
-  
+    new Animated.ValueXY({ x: 0, y: 0 })
   ).current;
 
   return (
