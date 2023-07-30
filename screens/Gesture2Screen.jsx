@@ -51,12 +51,12 @@ const Gesture2Screen = () => {
       ]).start()
       setSecondAnimated(!secondAnimated)
     } else {
-      Animated.sequence([
-        Animated.spring(translation.y, {
+      Animated.parallel([
+        Animated.spring(translation2.y, {
           toValue: 0,
           useNativeDriver: true,
         }),
-        Animated.spring(translation.x, {
+        Animated.spring(translation2.x, {
           toValue: 0,
           useNativeDriver: true,
         }),
