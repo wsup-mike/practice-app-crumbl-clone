@@ -23,7 +23,7 @@ const Gesture4Screen = (props) => {
       }}
     >
       <Text className='text-3xl font-extralight text-white text-center mt-3'>Gesture4Screen</Text>
-      <View
+      <Animated.View
         style={{
           position: 'absolute',
           left: dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE,
@@ -33,9 +33,9 @@ const Gesture4Screen = (props) => {
           borderRadius: CURSOR_HALF_SIDE_SIZE,
           backgroundColor: 'orange',
         }}
-      >
+      />
         
-      </View>
+      
     </SafeAreaView>
   )
 
