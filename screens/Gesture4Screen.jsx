@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 
 const CURSOR_SIDE_SIZE = 20;
 const CURSOR_HALF_SIDE_SIZE = CURSOR_SIDE_SIZE / 2;
