@@ -6,6 +6,7 @@ const Gesture1Screen = () => {
   const translation = useRef(new Animated.Value(0)).current
   const translation2 = useRef(new Animated.Value(0)).current
 
+  // My helper function
   const toggleBox = () => {
     const targetValue = animated ? 300 : 0;
     
@@ -17,6 +18,7 @@ const Gesture1Screen = () => {
     setAnimated(!animated)
   }
 
+  // The useEffect side effect for Square #1
   useEffect(() => {
     Animated.timing(translation, {
       toValue: 300,
@@ -25,40 +27,34 @@ const Gesture1Screen = () => {
   }, []);
 
   return (
-  <SafeAreaView className='flex-1 bg-lime-400'>
-    <View>
-      <Text className='text-3xl font-extralight text-white text-center mt-8'>Gesture1Screen</Text>
-    </View>
+    <SafeAreaView className='flex-1 bg-lime-400'>
+      <View>
+        <Text className='text-3xl font-extralight text-white text-center mt-8'>Gesture1Screen</Text>
+      </View>
 
-    <Text className='text-center text-xl font-extralight text-white mt-3 ml-3'>Left to Right: 300px distance - Animated.timing( )</Text>
-    <Animated.View 
-      className='w-14 h-14 bg-teal-500 mt-3 ml-3'
-      style={{
-        transform: [{translateX: translation}],
-      }}
-    />
+      {/* Square #1 */}
+      <Text className='text-center text-xl font-extralight text-white mt-3 ml-3'>Left to Right: 300px distance - Animated.timing( )</Text>
+      <Animated.View 
+        className='w-14 h-14 bg-teal-500 mt-3 ml-3'
+        style={{
+          transform: [{translateX: translation}],
+        }}
+      />
 
-    <Text className='text-center text-xl font-extralight text-white mt-3 ml-3'>Or Press to activate animation: L - R 300</Text>
-    {/* <View className='w-32 h-12 bg-red-400 rounded-lg justify-center self-center'><Text className='text-center text-white'>Tap to Animate</Text></View> */}
-    {/* <Button title='Tap to Animate' onPress={() => {
-      Animated.timing(translation2, {
-        toValue: 300,
-        useNativeDriver: true,
-      }).start()
-    }} /> */}
+      {/* Square #2 */}
+      <Text className='text-center text-xl font-extralight text-white mt-3 ml-3'>Or Press to activate animation: L - R 300</Text>
+      <Button 
+        title='Tap to Animate Back or Forth'
+        onPress={toggleBox}
+      />
 
-    <Button 
-      title='Tap to Animate Back or Forth'
-      onPress={toggleBox}
-    />
-
-    <Animated.View 
-      className='w-14 h-14 bg-teal-500 mt-3 ml-3'
-      style={{
-        transform: [{translateX: translation2}],
-      }}
-    />
-  </SafeAreaView>
+      <Animated.View 
+        className='w-14 h-14 bg-teal-500 mt-3 ml-3'
+        style={{
+          transform: [{translateX: translation2}],
+        }}
+      />
+    </SafeAreaView>
   )
 }
 
