@@ -4,6 +4,7 @@ import { Pressable } from 'react-native';
 
 const Gesture2Screen = () => {
   const [firstAnimated, setFirstAnimated] = useState(true)
+  const [secondAnimated, setSecondAnimated] = useState(true)
 
   const translation = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
   const translation2 = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
@@ -36,18 +37,22 @@ const Gesture2Screen = () => {
     }
   }
   
-  const animation2 = () => {
-    Animated.parallel([
-      Animated.spring(translation2.x, {
-        toValue: 300,
-        useNativeDriver: true,
-      }),
-      Animated.spring(translation2.y, {
-        toValue: 70,
-        useNativeDriver: true,
-      })
-    ]).start()
-  }
+  // const animation2 = () => {
+  //   if ()
+  // }
+
+  // const animation2 = () => {
+  //   Animated.parallel([
+  //     Animated.spring(translation2.x, {
+  //       toValue: 300,
+  //       useNativeDriver: true,
+  //     }),
+  //     Animated.spring(translation2.y, {
+  //       toValue: 70,
+  //       useNativeDriver: true,
+  //     })
+  //   ]).start()
+  // }
 
   return (
     <SafeAreaView className='flex-1 bg-orange-400'>
