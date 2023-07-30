@@ -1,13 +1,16 @@
 import { View, Text, SafeAreaView, Animated } from 'react-native'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Pressable } from 'react-native';
 
 const Gesture2Screen = () => {
+  const [firstAnimated, setFirstAnimated] = useState(true)
 
   const translation = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
   const translation2 = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
 
   const animation1 = () => {
+    
+
     Animated.sequence([
       Animated.spring(translation.x, {
         toValue: 300,
@@ -18,6 +21,8 @@ const Gesture2Screen = () => {
         useNativeDriver: true,
       })
     ]).start()
+
+    
   }
   
   const animation2 = () => {
@@ -32,7 +37,6 @@ const Gesture2Screen = () => {
       })
     ]).start()
   }
-
 
   return (
     <SafeAreaView className='flex-1 bg-orange-400'>
