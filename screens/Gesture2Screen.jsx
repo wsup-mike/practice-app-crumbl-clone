@@ -39,7 +39,7 @@ const Gesture2Screen = () => {
   
   const animation2 = () => {
     if (secondAnimated) {
-      Animated.sequence([
+      Animated.parallel([
         Animated.spring(translation2.x, {
           toValue: 300,
           useNativeDriver: true,
