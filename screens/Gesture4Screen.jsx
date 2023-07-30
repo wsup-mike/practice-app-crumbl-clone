@@ -26,8 +26,10 @@ const Gesture4Screen = (props) => {
       <Animated.View
         style={{
           position: 'absolute',
-          left: dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE,
-          top: dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE, 
+          // left: dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE,
+          left: touch.x,
+          // top: dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE, 
+          top: touch.y,
           height: CURSOR_SIDE_SIZE,
           width: CURSOR_SIDE_SIZE,
           borderRadius: CURSOR_HALF_SIDE_SIZE,
