@@ -6,12 +6,21 @@ const Gesture3Screen = () => {
   const translation = useRef(new Animated.Value(0)).current
 
   const animation = () => {
-    
-    Animated.timing(translation, {
-      toValue: 300,
-      useNativeDriver: true,
-      duration: 1000,
-    }).start()
+    if (animated) {
+      Animated.timing(translation, {
+        toValue: 300,
+        useNativeDriver: true,
+        duration: 1000,
+      }).start()
+      setAnimated(!animated)
+    } else {
+      Animated.timing(translation, {
+        toValue: 0,
+        useNativeDriver: true,
+        duration: 1000,
+      }).start()
+      setAnimated(!animated)
+    }
   };
 
   return (
@@ -39,7 +48,7 @@ const Gesture3Screen = () => {
             })},
           ],
           backgroundColor: translation.interpolate({
-            inputRange: [25, 125, 300],
+            inputRange: [0, 125, 300],
             outputRange: ['red', 'blue', 'red'],
             extrapolate: 'clamp'
           })
@@ -47,7 +56,6 @@ const Gesture3Screen = () => {
           //   inputRange: [0, 300],
           //   outputRange: [1, 0],
           // })
-          
         }}
       />
 
