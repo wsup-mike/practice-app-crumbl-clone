@@ -12,7 +12,10 @@ const Gesture4Screen = (props) => {
   const dimensions = useWindowDimensions();
 
   return (
-    <SafeAreaView className='flex-1 bg-stone-400'>
+    <SafeAreaView
+      className='flex-1 bg-stone-400'
+      onStartShouldSetResponder={() => true}
+    >
       <Text className='text-3xl font-extralight text-white text-center mt-3'>Gesture4Screen</Text>
       <View
         style={{
