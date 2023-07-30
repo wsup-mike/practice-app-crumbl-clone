@@ -10,14 +10,14 @@ const Gesture3Screen = () => {
       Animated.timing(translation, {
         toValue: 300,
         useNativeDriver: true,
-        duration: 1000,
+        duration: 2000,
       }).start()
       setAnimated(!animated)
     } else {
       Animated.timing(translation, {
         toValue: 0,
         useNativeDriver: true,
-        duration: 1000,
+        duration: 2000,
       }).start()
       setAnimated(!animated)
     }
@@ -44,7 +44,7 @@ const Gesture3Screen = () => {
             { translateX: translation },
             { rotate: translation.interpolate({
               inputRange: [0, 300],
-              outputRange: ['0deg', '720deg'],
+              outputRange: ['0deg', '1440deg'],
             })},
           ],
           backgroundColor: translation.interpolate({
