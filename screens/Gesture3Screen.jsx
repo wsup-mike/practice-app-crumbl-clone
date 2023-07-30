@@ -1,23 +1,20 @@
 import { View, Text, SafeAreaView, Pressable, Animated } from 'react-native'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 const Gesture3Screen = () => {
-
+  const [animated, setAnimated] = useState(true)
   const translation = useRef(new Animated.Value(0)).current
 
   const animation = () => {
+    
+    
+    
     Animated.parallel([
       Animated.timing(translation, {
         toValue: 300,
         useNativeDriver: true,
         duration: 1000,
       }),
-
-      // Animated.timing(translation, {
-      //   toValue: 300,
-      //   useNativeDriver: true,
-      //   duration: 1000,
-      // })
     ]).start()
   };
 
