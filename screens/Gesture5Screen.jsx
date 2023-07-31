@@ -1,4 +1,4 @@
-import { View, Text ,SafeAreaView, Image, PanResponder } from 'react-native'
+import { View, Text ,SafeAreaView, Image, PanResponder, Animated } from 'react-native'
 import React, { useRef } from 'react'
 
 
