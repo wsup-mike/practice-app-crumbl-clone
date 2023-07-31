@@ -1,8 +1,10 @@
 import { View, Text ,SafeAreaView, Image, PanResponder } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 
 
 const Gesture5Screen = () => {
+
+  
   return (
     <SafeAreaView className='flex-1 items-center justify-center bg-indigo-500'>
       <Text className='text-center font-extralight text-white text-3xl'>The Kiddos</Text>
