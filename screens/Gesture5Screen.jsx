@@ -8,7 +8,16 @@ const Gesture5Screen = () => {
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: (evt, gestureState) => {},
+      onPanResponderMove: (evt, gestureState) => {
+        const activeTouches = evt.nativeEvent.changedTouches.length;
+
+        if (activeTouches === 1) {
+          pan.setValue({
+            x: gestureState.dx,
+            y: gestureState.dy,
+          })
+        }
+      },
       onPanResponderRelease: (
         evt, gestureState
       ) => {}
