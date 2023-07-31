@@ -36,18 +36,28 @@ const Gesture5Screen = () => {
           )
 
           const screenMovedPercents = distance / dimensions.width;
+
+          scale.setValue(1 + screenMovedPercents)
         }
       },
       onPanResponderRelease: (
         evt, gestureState
       ) => {
-        Animated.spring(pan, {
-          toValue: {
-            x: 0,
-            y: 0,
-          },
-          useNativeDriver: true,
-        }
+        Animated.parallel([
+          Animated.spring(pan, {
+            toValue: {
+              x: 0,
+              y: 0,
+            },
+            useNativeDriver: true,
+          }
+          ),
+
+          Animated.spring(scale, {
+            toValue: 1,
+            useNativeDriver: true,
+          }),
+        ]
         ).start()
       }
     })
