@@ -20,7 +20,14 @@ const Gesture5Screen = () => {
       <Text className='text-center font-extralight text-white text-3xl'>The Kiddos</Text>
       <Image 
         {...panResponder.panHandlers}
-        style={{width: '90%', height: '90%'}}
+        style={{
+          width: '90%', 
+          height: '90%',
+          transform: [
+            { translateX: pan.x },
+            { translateY: pan.y },
+          ],
+        }}
         className='rounded-xl'
         source={require('../assets/Cousins.jpg')}
       />
