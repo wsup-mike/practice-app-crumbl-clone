@@ -4,6 +4,8 @@ import React, { useRef } from 'react'
 
 const Gesture5Screen = () => {
   const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
+
+  const scale = new Animated.Value(1)
   
   const panResponder = useRef(
     PanResponder.create({
