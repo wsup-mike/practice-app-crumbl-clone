@@ -1,6 +1,11 @@
 import { View, Text ,SafeAreaView, Image, PanResponder, Animated } from 'react-native'
 import React, { useRef } from 'react'
 
+const pointsDistance = ([xA, yA], [xB, yB]) => {
+  return Math.sqrt(
+    Math.pow(xA - xB, 2) + Math.pow(yA - yB, 2)
+  )
+}
 
 const Gesture5Screen = () => {
   const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
