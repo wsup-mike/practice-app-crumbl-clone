@@ -17,6 +17,7 @@ const Gesture5Screen = () => {
     <SafeAreaView className='flex-1 items-center justify-center bg-indigo-500'>
       <Text className='text-center font-extralight text-white text-3xl'>The Kiddos</Text>
       <Image 
+        {...panResponder.panHandlers}
         style={{width: 350, height: 500}}
         className='rounded-xl'
         source={require('../assets/Cousins.jpg')}
