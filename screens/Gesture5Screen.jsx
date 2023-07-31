@@ -3,7 +3,15 @@ import React, { useRef } from 'react'
 
 
 const Gesture5Screen = () => {
-
+  const panResponder = useRef(
+    PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onPanResponderMove: (evt, gestureState) => {},
+      onPanResponderRelease: (
+        evt, gestureState
+      ) => {}
+    })
+  ).current
   
   return (
     <SafeAreaView className='flex-1 items-center justify-center bg-indigo-500'>
