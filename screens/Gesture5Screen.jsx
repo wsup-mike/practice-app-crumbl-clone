@@ -3,6 +3,8 @@ import React, { useRef } from 'react'
 
 
 const Gesture5Screen = () => {
+  const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
+  
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
