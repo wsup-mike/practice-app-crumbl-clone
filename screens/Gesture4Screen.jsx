@@ -11,10 +11,10 @@ const Gesture4Screen = (props) => {
 
   const initialX = dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE;
   const initialY = dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE;
-  
+
   useEffect(() => {
     touch.setValue({ x: initialX, y: initialY})
-  }, [])
+  }, [initialX, initialY])
 
   const handleRelease = () => {
     Animated.spring(touch, {
@@ -32,9 +32,8 @@ const Gesture4Screen = (props) => {
           x: event.nativeEvent.locationX,
           y: event.nativeEvent.locationY,
         })
-      onResponderRelease={handleRelease}
-        
       }}
+      onResponderRelease={handleRelease}
     >
       <Text className='text-3xl font-extralight text-white text-center mt-3'>Gesture4Screen</Text>
       <Animated.View
