@@ -9,7 +9,7 @@ const pointsDistance = ([xA, yA], [xB, yB]) => {
 
 const Gesture5Screen = () => {
   const dimensions = useWindowDimensions();
-  
+
   const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current
 
   const scale = new Animated.Value(1)
@@ -34,6 +34,8 @@ const Gesture5Screen = () => {
             [touchA.pageX, touchA.pageY],
             [touchB.pageX, touchB.pageY],
           )
+
+          const screenMovedPercents = distance / dimensions.width;
         }
       },
       onPanResponderRelease: (
