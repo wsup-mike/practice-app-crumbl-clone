@@ -9,10 +9,10 @@ const Gesture4Screen = (props) => {
   const touch = useRef(new Animated.ValueXY()).current;
   const dimensions = useWindowDimensions();
 
+  const initialX = dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE;
+  const initialY = dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE;
+  
   useEffect(() => {
-    const initialX = dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE;
-    const initialY = dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE;
-
     touch.setValue({ x: initialX, y: initialY})
   }, [])
 
@@ -32,6 +32,7 @@ const Gesture4Screen = (props) => {
           x: event.nativeEvent.locationX,
           y: event.nativeEvent.locationY,
         })
+      onResponderRelease={handleRelease}
         
       }}
     >
