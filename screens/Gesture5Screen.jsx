@@ -20,7 +20,16 @@ const Gesture5Screen = () => {
       },
       onPanResponderRelease: (
         evt, gestureState
-      ) => {}
+      ) => {
+        Animated.spring(pan, {
+          toValue: {
+            x: 0,
+            y: 0,
+          },
+          useNativeDriver: true,
+        }
+        ).start()
+      }
     })
   ).current
   
