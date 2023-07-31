@@ -46,6 +46,7 @@ const Gesture5Screen = () => {
           transform: [
             { translateX: pan.x },
             { translateY: pan.y },
+            { scale: scale },
           ],
         }}
         className='rounded-xl'
