@@ -23,7 +23,10 @@ const Gesture5Screen = () => {
         style={{
           width: '90%', 
           height: '90%',
-
+          transform: [
+            { translateX: pan.x },
+            { translateY: pan.y },
+          ],
         }}
         className='rounded-xl'
         source={require('../assets/Cousins.jpg')}
