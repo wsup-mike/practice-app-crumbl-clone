@@ -1,4 +1,4 @@
-import { View, Text ,SafeAreaView, Image, PanResponder, Animated } from 'react-native'
+import { View, Text ,SafeAreaView, Image, PanResponder, Animated, useWindowDimensions } from 'react-native'
 import React, { useRef } from 'react'
 
 const pointsDistance = ([xA, yA], [xB, yB]) => {
