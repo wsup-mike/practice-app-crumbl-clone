@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, Animated, useWindowDimensions } from 'react-native'
 import React, { useRef, useEffect } from 'react'
 
-const CURSOR_SIDE_SIZE = 20;
+const CURSOR_SIDE_SIZE = 60;
 const CURSOR_HALF_SIDE_SIZE = CURSOR_SIDE_SIZE / 2;
 
 const Gesture4Screen = (props) => {
