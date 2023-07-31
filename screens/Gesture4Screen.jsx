@@ -12,7 +12,12 @@ const Gesture4Screen = (props) => {
   const touch = useRef(new Animated.ValueXY()).current;
   const dimensions = useWindowDimensions();
 
-    
+  useEffect(() => {
+    const initialX = dimensions.width / 2 - CURSOR_HALF_SIDE_SIZE;
+    const initialY = dimensions.height / 2 - CURSOR_HALF_SIDE_SIZE;
+
+    touch.setValue({ x: initialX, y: initialY})
+  }, [])
 
   return (
     <SafeAreaView
