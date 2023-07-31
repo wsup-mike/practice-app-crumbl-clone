@@ -23,6 +23,15 @@ const Gesture5Screen = () => {
             x: gestureState.dx,
             y: gestureState.dy,
           })
+        } else if (activeTouches >= 2 ) {
+          const touches = evt.nativeEvent.changedTouches;
+          const touchA = touches[0];
+          const touchB = touches[1];
+
+          const distance = pointsDistance(
+            [touchA.pageX, touchA.pageY],
+            [touchB.pageX, touchB.pageY],
+          )
         }
       },
       onPanResponderRelease: (
