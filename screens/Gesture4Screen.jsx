@@ -5,9 +5,6 @@ const CURSOR_SIDE_SIZE = 20;
 const CURSOR_HALF_SIDE_SIZE = CURSOR_SIDE_SIZE / 2;
 
 const Gesture4Screen = (props) => {
-  // const touch = useRef(
-  //   new Animated.ValueXY({ x: 0, y: 0 })
-  // ).current;
 
   const touch = useRef(new Animated.ValueXY()).current;
   const dimensions = useWindowDimensions();
@@ -19,6 +16,13 @@ const Gesture4Screen = (props) => {
     touch.setValue({ x: initialX, y: initialY})
   }, [])
 
+  const handleRelease = () => {
+    Animated.spring(touch, {
+      toValue: {x: initialX, y: initialY },
+      useNativeDriver: false,
+    }).start();
+  }
+
   return (
     <SafeAreaView
       className='flex-1 bg-stone-400'
@@ -28,6 +32,7 @@ const Gesture4Screen = (props) => {
           x: event.nativeEvent.locationX,
           y: event.nativeEvent.locationY,
         })
+        
       }}
     >
       <Text className='text-3xl font-extralight text-white text-center mt-3'>Gesture4Screen</Text>
