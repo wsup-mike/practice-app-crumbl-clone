@@ -10,7 +10,7 @@ const Modal1 = ({ onClose, visible }) => {
 
     return (
         <View 
-            className=' items-center w-full h-full'
+            className='absolute items-center w-full h-full'
             style={{ 
                 transform: [{ translateY: height }]
             }}
