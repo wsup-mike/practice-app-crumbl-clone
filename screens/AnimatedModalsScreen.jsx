@@ -3,8 +3,8 @@ import React from 'react'
 
 const AnimatedModalsScreen = () => {
   return (
-    <SafeAreaView>
-      <Text>AnimatedModalsScreen</Text>
+    <SafeAreaView className='flex-1 justify-center items-center bg-indigo-400'>
+      <Text className='text-center font-extralight'>AnimatedModalsScreen</Text>
     </SafeAreaView>
   )
 }
