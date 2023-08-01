@@ -46,14 +46,16 @@ const Modal1 = ({ onClose, visible }) => {
                 style={{ opacity: backgroundOpacity }} />
 
             <Animated.View 
-                className='absolute items-center w-full h-full pt-5'
+                className='absolute items-center  h-full pt-5'
                 style={{ 
                     width: width,
                     transform: [{ translateY: transY.current }],
                 }}
             >
                 
-                    <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'>
+                    <View className='bg-white h-screen w-full items-center justify-center rounded-t-2xl'
+                        style={{ width: width }}
+                    >
                         <Button title='Close Modal' onPress={onPress}/>
                     </View>
                 
