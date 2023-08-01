@@ -6,13 +6,16 @@ import Modal1 from './Modal1';
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
 
+  handleShowModal = () => {
+    setVisible(true)
+  }
+ 
+ 
   handleCloseModal = () => {
     setVisible(false)
   }
 
-  handleShowModal = () => {
-    setVisible(true)
-  }
+ 
 
   return (
     <SafeAreaView className='flex-1 items-center bg-indigo-400'>
