@@ -1,10 +1,10 @@
 import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from 'react-native';
 import Modal1 from './Modal1';
 
 const AnimatedModalsScreen = () => {
-
+  
   handleCloseModal = () => {
 
   }
