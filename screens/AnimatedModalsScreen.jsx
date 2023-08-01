@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Dimensions } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Button } from 'react-native';
 import Modal1 from './Modal1';
 
