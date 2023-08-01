@@ -4,7 +4,8 @@ import { Easing } from 'react-native';
 
 const Modal1 = ({ onClose, visible }) => {
     
-    const { height } = Dimensions.get('screen');
+    // const { height } = Dimensions.get('screen');
+    const { height, width } = Dimensions.get('window');
     const transY = useRef(new Animated.Value(height))
 
     useEffect(() => {
@@ -37,16 +38,22 @@ const Modal1 = ({ onClose, visible }) => {
 
     return (
         <>
-            <Animated.View pointerEvents='none' className='absolute w-screen h-screen justify-center items-center bg-indigo-700 opacity-80 ' style={{ opacity: backgroundOpacity}} />
+            <Animated.View 
+                pointerEvents='none' 
+                className='
+                    absolute w-screen h-screen justify-center items-center bg-indigo-700 opacity-80 
+                ' 
+                style={{ opacity: backgroundOpacity }} />
 
             <Animated.View 
                 className='absolute items-center w-full h-full pt-5'
                 style={{ 
-                    transform: [{ translateY: transY.current }]
+                    width: width,
+                    transform: [{ translateY: transY.current }],
                 }}
             >
                 
-                    <View className='bg-white h-screen w-full items-center justify-center rounded-t-2xl'>
+                    <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'>
                         <Button title='Close Modal' onPress={onPress}/>
                     </View>
                 
