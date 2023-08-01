@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { Button } from 'react-native';
 
-const Modal1 = ({ onClose }) => {
+const Modal1 = ({ onClose, visible }) => {
 
     const onPress = () => {
         onClose();
