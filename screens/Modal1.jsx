@@ -31,7 +31,8 @@ const Modal1 = ({ onClose, visible }) => {
 
     return (
         <>
-            <View />
+            <View className='absolute w-full h-screen justify-center items-center bg-indigo-700 opacity-80' />
+
             <Animated.View 
                 className='absolute items-center w-full h-full pt-5'
                 style={{ 
