@@ -24,7 +24,7 @@ const Modal1 = ({ onClose, visible }) => {
 
     return (
         <Animated.View 
-            className='absolute items-center w-full h-full'
+            className=' items-center w-full h-full'
             style={{ 
                 transform: [{ translateY: transY.current }]
             }}
