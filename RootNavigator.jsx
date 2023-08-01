@@ -18,7 +18,7 @@ const RootNavigator = () => {
             <Tab.Screen name='Gesture3Stack' component={Gesture3Stack}/>
             <Tab.Screen name='Gesture4Stack' component={Gesture4Stack}/>
             <Tab.Screen name='Gesture5Stack' component={Gesture5Stack}/>
-            <Tab.Screen name='AnimatedModalsStack' component={AnimatedModalsStack}/>
+            <Tab.Screen name='AnimatedModalsStack' component={AnimatedModalsStack} options={{ headerShown: false }}/>
         </Tab.Navigator>
     )
 }
