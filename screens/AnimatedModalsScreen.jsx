@@ -4,6 +4,7 @@ import { Button } from 'react-native';
 import Modal1 from './Modal1';
 
 const AnimatedModalsScreen = () => {
+  const [visible, setVisible] = useState(false)
   
   handleCloseModal = () => {
 
