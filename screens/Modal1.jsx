@@ -9,10 +9,8 @@ const Modal1 = ({ onClose, visible }) => {
 
     useEffect(() => {
         if (visible) {
-            Animated.timing(transY.current, {
+            Animated.spring(transY.current, {
                 toValue: 0,
-                duration: 2000,
-                easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start()
         }
