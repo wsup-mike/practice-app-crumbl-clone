@@ -1,5 +1,5 @@
 import { View, Text, Button, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Modal1 = ({ onClose, visible }) => {
     const { height } = Dimensions.get('screen');
