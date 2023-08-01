@@ -11,7 +11,9 @@ const Modal1 = ({ onClose, visible }) => {
     return (
         <View 
             className=' items-center w-full h-full'
-            
+            style={{ 
+                transform: [{ translateY: height }]
+            }}
         >
             <View className='bg-white h-2/3 w-10/12 items-center justify-center rounded-xl'>
                 <Button title='Close Modal' onPress={onPress}/>
