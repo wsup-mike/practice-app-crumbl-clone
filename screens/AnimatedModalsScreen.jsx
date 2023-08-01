@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Dimensions } from 'react-native'
+import { View, Text, SafeAreaView, Dimensions, Animated } from 'react-native'
 import React, { useState, useRef } from 'react'
 import { Button } from 'react-native';
 import Modal1 from './Modal1';
