@@ -6,6 +6,7 @@ import Gesture2Stack from './stacks/Gesture2Stack'
 import Gesture3Stack from './stacks/Gesture3Stack'
 import Gesture4Stack from  './stacks/Gesture4Stack'
 import Gesture5Stack from './stacks/Gesture5Stack'
+import AnimatedModalsStack from './stacks/AnimatedModalsStack';
 
 const Tab = createBottomTabNavigator();
 
