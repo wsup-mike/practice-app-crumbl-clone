@@ -31,7 +31,7 @@ const Modal1 = ({ onClose, visible }) => {
 
     return (
         <>
-            <Animated.View pointerEvents='none' className='absolute w-full h-screen justify-center items-center bg-indigo-700 opacity-80' />
+            <Animated.View pointerEvents='none' className='absolute w-full h-screen justify-center items-center bg-indigo-700 opacity-80' style={{ opacity: 0.3}} />
 
             <Animated.View 
                 className='absolute items-center w-full h-full pt-5'
