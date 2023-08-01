@@ -5,13 +5,13 @@ import Modal1 from './Modal1';
 
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
-  
+
   handleCloseModal = () => {
 
   }
 
   handleShowModal = () => {
-
+    setVisible(true)
   }
 
   return (
