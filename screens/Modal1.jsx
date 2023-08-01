@@ -11,7 +11,7 @@ const Modal1 = ({ onClose, visible }) => {
         if (visible) {
             Animated.timing(transY.current, {
                 toValue: 0,
-                duration: 250,
+                duration: 225,
                 easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start()
