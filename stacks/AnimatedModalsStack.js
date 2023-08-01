@@ -8,7 +8,7 @@ const AnimatedModalsStack = () => {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen />
+      <Stack.Screen name="AnimatedModals" component={AnimatedModals} />
     </Stack.Navigator>
   );
 };
