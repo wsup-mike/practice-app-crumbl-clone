@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 const Modal1 = ({ onClose, visible }) => {
     const { height } = Dimensions.get('screen');
 
+    const transY = useRef(new Animated.Value(height))
 
 
     const onPress = () => {
