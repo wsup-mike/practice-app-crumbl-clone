@@ -1,10 +1,12 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
+import { Button } from 'react-native';
 
 const AnimatedModalsScreen = () => {
   return (
-    <SafeAreaView className='flex-1 justify-center items-center bg-indigo-400'>
-      <Text className='text-center font-extralight'>AnimatedModalsScreen</Text>
+    <SafeAreaView className='flex-1 items-center bg-indigo-400'>
+      <Text className='text-center font-extralight text-3xl mt-3 text-white'>AnimatedModalsScreen</Text>
+      <Button title='Show Modal1' onPress={() => {}}/>
     </SafeAreaView>
   )
 }
