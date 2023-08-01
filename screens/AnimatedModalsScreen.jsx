@@ -7,7 +7,7 @@ const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
 
   handleCloseModal = () => {
-
+    setVisible(false)
   }
 
   handleShowModal = () => {
