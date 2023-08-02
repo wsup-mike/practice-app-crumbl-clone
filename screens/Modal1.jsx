@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Easing } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+
 const Modal1 = ({ onClose, visible }) => {
     const navigation = useNavigation()
     
