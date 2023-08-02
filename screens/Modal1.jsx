@@ -2,15 +2,19 @@ import { View, Text, Button, Dimensions, Animated } from 'react-native'
 import React, { useEffect, useRef } from 'react'
 import { Easing } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AnimatedModalsStack from '../stacks/AnimatedModalsStack';
 
 
 const Modal1 = ({ onClose, visible }) => {
     const navigation = useNavigation()
     
     const { height, width } = Dimensions.get('screen');
-    // const { height, width } = Dimensions.get('window');
+    
+    // Current user device screen height is captured and is now a mutable value
+    // Note: 'height' is a distance value in pixels
     const transY = useRef(new Animated.Value(height))
 
+    // 
     useEffect(() => {
         if (visible) {
             Animated.timing(transY.current, {
@@ -22,7 +26,7 @@ const Modal1 = ({ onClose, visible }) => {
         } else {
             Animated.timing(transY.current, {
                 toValue: height,
-                duration: 225,
+                duration: 2000,
                 easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start()
@@ -57,10 +61,10 @@ const Modal1 = ({ onClose, visible }) => {
             >
                 
                     <View className='bg-white h-screen w-full items-center justify-center rounded-t-2xl'
-                        style={{ width: '100%'}}
+                        style={{ width: 460}}
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={() => navigation.navigate('Modal2')} />
+                        <Button title='Open Modal 2' onPress={() => navigation.navigate} />
                     </View>
                 
             </Animated.View>
