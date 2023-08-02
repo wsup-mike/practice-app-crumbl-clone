@@ -54,7 +54,7 @@ const Modal1 = ({ onClose, visible }) => {
             >
                 
                     <View className='bg-white h-screen w-full items-center justify-center rounded-t-2xl'
-                        style={{ width: width }}
+                        style={{ width: '100%'}}
                     >
                         <Button title='Close Modal' onPress={onPress}/>
                     </View>

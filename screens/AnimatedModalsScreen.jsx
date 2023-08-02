@@ -5,10 +5,15 @@ import Modal1 from './Modal1';
 
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
+  const [visible2, setVisible2] = useState(false)
   // const { height } = Dimensions.get('window'); // this
   //   const transY = useRef(new Animated.Value(0)); // this
 
   handleShowModal = () => {
+    setVisible(true)
+  }
+  
+  handleShowModal2 = () => {
     setVisible(true)
   }
  
@@ -26,15 +31,18 @@ const AnimatedModalsScreen = () => {
  
   return (
     <>
-      <View className='absolute w-full h-full bg-black' />
+      <View className='absolute w-full h-full bg-red-400' />
       <SafeAreaView 
         className='flex-1 items-center bg-indigo-400'
-        // style={{ 
-        //   transform: [{ scale: scaleValue }]
-        // }}
+        style={{ 
+          transform: [{ scale: .9 }]
+        }}
       >
         <Text className='text-center font-extralight text-3xl mt-3 text-white'>AnimatedModalsScreen</Text>
-        <Button title='Show Modal1' onPress={handleShowModal}/>
+        <View className='flex-row'>
+          <Button title='Show Modal1' onPress={handleShowModal}/>
+          <Button title='Show Modal2' onPress={handleShowModal2}/>
+        </View>
         <Modal1 visible={visible} onClose={handleCloseModal} />
       </SafeAreaView>
     </>
