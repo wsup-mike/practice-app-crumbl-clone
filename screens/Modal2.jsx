@@ -42,6 +42,7 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
             >
                 <View 
                     className='bg-black h-screen w-screen items-center justify-center rounded-t-2xl'
+                    style={{ width: '100%'}}
                 >
                     <Button title='Close Modal2' onPress={onPress} />
                 </View>
