@@ -40,7 +40,9 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
                     transform: [{ translateX: transX.current }],
                 }}
             >
-                <View >
+                <View 
+                    className='bg-black h-screen w-screen items-center justify-center rounded-t-2xl'
+                >
                     <Button title='Close Modal2' onPress={onPress} />
                 </View>
             </Animated.View>
