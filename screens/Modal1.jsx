@@ -59,7 +59,7 @@ const Modal1 = ({ onClose, visible }) => {
                         style={{ width: '100%'}}
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={}/>
+                        <Button title='Open Modal 2' onPress={() => navigation.navigate('Modal2')} />
                     </View>
                 
             </Animated.View>
