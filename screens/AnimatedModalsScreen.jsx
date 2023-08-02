@@ -14,12 +14,16 @@ const AnimatedModalsScreen = () => {
   }
   
   handleShowModal2 = () => {
-    setVisible(true)
+    setVisible2(true)
   }
  
  
   handleCloseModal = () => {
     setVisible(false)
+  }
+  
+  handleCloseModal2 = () => {
+    setVisible2(false)
   }
 
   // const scaleValue = transY.current.interpolate({ //this
