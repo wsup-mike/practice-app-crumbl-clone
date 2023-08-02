@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, Dimensions, Animated } from 'react-native'
 import React, { useState, useRef } from 'react'
 import { Button } from 'react-native';
 import Modal1 from './Modal1';
+import Modal2 from './Modal2';
 
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
