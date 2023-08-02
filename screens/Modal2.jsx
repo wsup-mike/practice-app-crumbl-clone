@@ -27,7 +27,9 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
         }
     }, [visible2])
 
-    
+    const onPress = () => {
+        onClose();
+    }    
     
     return (
         <View>
