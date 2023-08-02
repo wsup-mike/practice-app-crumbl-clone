@@ -14,7 +14,8 @@ const AnimatedModalsStack = () => {
         name="AnimatedModalsScreen"
         component={AnimatedModalsScreen}
       />
-      <Stack.Screen name="Modal1" />
+      <Stack.Screen name="Modal1" component={Modal1} />
+      <Stack.Screen name="Modal2" component={Modal2} />
     </Stack.Navigator>
   );
 };
