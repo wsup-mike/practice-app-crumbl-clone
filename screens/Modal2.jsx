@@ -36,6 +36,7 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
             <Animated.View
                 className='absolute items-center h-full pt-5'
                 style={{
+                    width: width,
                     transform: [{ translateX: transX.current }],
                 }}
             >
