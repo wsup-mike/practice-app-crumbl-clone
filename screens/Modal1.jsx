@@ -68,7 +68,7 @@ const Modal1 = ({ onClose, visible, visible2, setVisible2 }) => {
                     <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={setVisible2} />
+                        <Button title='Open Modal 2' onPress={handleShowModal2} />
                     </View>
                 
             </Animated.View>
