@@ -32,9 +32,15 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
     }    
     
     return (
-        <View>
-            <Text>Modal2</Text>
-        </View>
+        <>
+            <Animated.View>
+                <View>
+                    <Button />
+                </View>
+            </Animated.View>
+                
+            
+        </>
   )
 }
 
