@@ -27,7 +27,7 @@ const AnimatedModalsScreen = () => {
   return (
     <>
       <View className='absolute w-full h-full bg-black' />
-      <Animated.SafeAreaView 
+      <SafeAreaView 
         className='flex-1 items-center bg-indigo-400'
         // style={{ 
         //   transform: [{ scale: scaleValue }]
@@ -36,7 +36,7 @@ const AnimatedModalsScreen = () => {
         <Text className='text-center font-extralight text-3xl mt-3 text-white'>AnimatedModalsScreen</Text>
         <Button title='Show Modal1' onPress={handleShowModal}/>
         <Modal1 visible={visible} onClose={handleCloseModal} />
-      </Animated.SafeAreaView>
+      </SafeAreaView>
     </>
   )
 }
