@@ -1,8 +1,10 @@
 import { View, Text, Button, Dimensions, Animated } from 'react-native'
 import React, { useEffect, useRef } from 'react'
 import { Easing } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Modal1 = ({ onClose, visible }) => {
+    const navigation = useNavigation()
     
     const { height, width } = Dimensions.get('screen');
     // const { height, width } = Dimensions.get('window');
@@ -57,7 +59,7 @@ const Modal1 = ({ onClose, visible }) => {
                         style={{ width: '100%'}}
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={onPress}/>
+                        <Button title='Open Modal 2' onPress={}/>
                     </View>
                 
             </Animated.View>
