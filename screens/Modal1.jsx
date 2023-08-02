@@ -50,7 +50,8 @@ const Modal1 = ({ onClose, visible }) => {
                 className='
                     absolute w-screen h-screen justify-center items-center bg-indigo-700 opacity-80 
                 ' 
-                style={{ opacity: backgroundOpacity }} />
+                style={{ opacity: backgroundOpacity }} 
+            />
 
             <Animated.View 
                 className='absolute items-center  h-full pt-5'
@@ -60,8 +61,7 @@ const Modal1 = ({ onClose, visible }) => {
                 }}
             >
                 
-                    <View className='bg-white h-screen w-full items-center justify-center rounded-t-2xl'
-                        style={{ width: 460}}
+                    <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'
                     >
                         <Button title='Close Modal' onPress={onPress}/>
                         <Button title='Open Modal 2' onPress={() => navigation.navigate} />
