@@ -5,7 +5,7 @@ import { Easing } from 'react-native';
 import AnimatedModalsStack from '../stacks/AnimatedModalsStack';
 
 
-const Modal1 = ({ onClose, visible }) => {
+const Modal1 = ({ onClose, visible, visible2, setVisible2 }) => {
     
     
     const { height, width } = Dimensions.get('screen');
@@ -13,6 +13,10 @@ const Modal1 = ({ onClose, visible }) => {
     // Current user device screen height is captured and is now a mutable value
     // Note: 'height' is a distance value in pixels
     const transY = useRef(new Animated.Value(height))
+
+    handleShowModal2 = () => {
+        setVisible2(true)
+      }
 
     // 
     useEffect(() => {
@@ -64,7 +68,7 @@ const Modal1 = ({ onClose, visible }) => {
                     <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={()=>{}} />
+                        <Button title='Open Modal 2' onPress={setVisible2} />
                     </View>
                 
             </Animated.View>
