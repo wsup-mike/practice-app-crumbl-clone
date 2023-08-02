@@ -50,7 +50,7 @@ const AnimatedModalsScreen = () => {
           <Button title='Show Modal2' onPress={handleShowModal2}/>
         </View>
         <Modal1 visible={visible} onClose={handleCloseModal} />
-        <Modal2 visible={visible} onClose={handleCloseModal2} />
+        <Modal2 visible={visible2} onClose={handleCloseModal2} />
         <Modal1 
         
         />
