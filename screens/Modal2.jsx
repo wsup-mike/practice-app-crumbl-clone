@@ -33,7 +33,9 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
     
     return (
         <>
-            <Animated.View>
+            <Animated.View
+                className='absolute items-center h-full pt-5'
+            >
                 <View>
                     <Button />
                 </View>
