@@ -4,8 +4,8 @@ import { Easing } from 'react-native';
 
 const Modal1 = ({ onClose, visible }) => {
     
-    // const { height } = Dimensions.get('screen');
-    const { height, width } = Dimensions.get('window');
+    const { height, width } = Dimensions.get('screen');
+    // const { height, width } = Dimensions.get('window');
     const transY = useRef(new Animated.Value(height))
 
     useEffect(() => {
