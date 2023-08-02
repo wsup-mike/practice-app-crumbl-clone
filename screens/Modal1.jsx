@@ -1,12 +1,12 @@
 import { View, Text, Button, Dimensions, Animated } from 'react-native'
 import React, { useEffect, useRef } from 'react'
 import { Easing } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+
 import AnimatedModalsStack from '../stacks/AnimatedModalsStack';
 
 
 const Modal1 = ({ onClose, visible }) => {
-    const navigation = useNavigation()
+    
     
     const { height, width } = Dimensions.get('screen');
     
@@ -64,7 +64,7 @@ const Modal1 = ({ onClose, visible }) => {
                     <View className='bg-white h-screen w-screen items-center justify-center rounded-t-2xl'
                     >
                         <Button title='Close Modal' onPress={onPress}/>
-                        <Button title='Open Modal 2' onPress={() => navigation.navigate} />
+                        <Button title='Open Modal 2' onPress={()=>{}} />
                     </View>
                 
             </Animated.View>
