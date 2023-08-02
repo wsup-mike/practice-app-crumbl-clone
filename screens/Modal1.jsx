@@ -19,7 +19,7 @@ const Modal1 = ({ onClose, visible }) => {
         } else {
             Animated.timing(transY.current, {
                 toValue: height,
-                duration: 250,
+                duration: 225,
                 easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start()
@@ -57,6 +57,7 @@ const Modal1 = ({ onClose, visible }) => {
                         style={{ width: '100%'}}
                     >
                         <Button title='Close Modal' onPress={onPress}/>
+                        <Button title='Open Modal 2' onPress={onPress}/>
                     </View>
                 
             </Animated.View>
