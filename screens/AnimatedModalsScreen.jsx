@@ -9,6 +9,7 @@ import Modal3 from './Modal3';
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
   const [visible2, setVisible2] = useState(false)
+  const [visible3, setVisible3] = useState(false)
   // const { height } = Dimensions.get('window'); // this
   //   const transY = useRef(new Animated.Value(0)); // this
 
