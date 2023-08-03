@@ -34,6 +34,10 @@ const AnimatedModalsScreen = () => {
     setVisible2(false)
   }
 
+  handleCloseModal3 = () => {
+    setVisible3(false)
+  }
+
   // const scaleValue = transY.current.interpolate({ //this
   //   inputRange: [0, height],
   //   outputRange: [1, 0.9], // Apply a scaling effect from 100% to 90%
