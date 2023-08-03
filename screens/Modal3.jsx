@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Button } from 'react-native'
-import React , { useRef }from 'react'
+import React , { useRef, useEffect }from 'react'
 
 const Modal3 = ({ visible3 }) => {
   return (
