@@ -5,7 +5,7 @@ import { Easing } from 'react-native';
 import AnimatedModalsStack from '../stacks/AnimatedModalsStack';
 
 
-const Modal1 = ({ onClose, visible, visible2 }) => {
+const Modal1 = ({ onClose, visible }) => {
     
     
     const { height, width } = Dimensions.get('screen');
