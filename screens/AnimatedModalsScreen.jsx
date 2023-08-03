@@ -52,9 +52,7 @@ const AnimatedModalsScreen = () => {
         </View>
         <Modal1 visible={visible} onClose={handleCloseModal} />
         <Modal2 visible={visible2} onClose={handleCloseModal2} />
-        <Modal1 
-        
-        />
+        <Modal3 visible={visible3} onClose={handleCloseModal3} />
       </SafeAreaView>
     </>
   )
