@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react'
 import { Button } from 'react-native';
 import Modal1 from './Modal1';
 import Modal2 from './Modal2';
+import Modal3 from './Modal3';
 
 
 const AnimatedModalsScreen = () => {
