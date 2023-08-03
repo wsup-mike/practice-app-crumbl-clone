@@ -20,6 +20,10 @@ const AnimatedModalsScreen = () => {
   handleShowModal2 = () => {
     setVisible2(true)
   }
+
+  handleShowModal3 = () => {
+    setVisible3(true)
+  }
  
  
   handleCloseModal = () => {
