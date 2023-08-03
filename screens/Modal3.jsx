@@ -1,6 +1,5 @@
-import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
-import { Button } from 'react-native';
+import { View, Text, SafeAreaView, Button } from 'react-native'
+import React , { useRef }from 'react'
 
 const Modal3 = ({ visible3 }) => {
   return (
