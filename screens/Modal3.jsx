@@ -16,14 +16,14 @@ const Modal3 = ({ visible3, onClose }) => {
 
     useEffect(() => {
         if (visible3) {
-            Animated.timing(transY, {
+            Animated.timing(transY.current, {
                 toValue: 0,
                 duration: 225,
                 easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start();
         } else {
-            Animated.timing(transY, {
+            Animated.timing(transY.current, {
                 toValue: height,
                 duration: 225,
                 easing: Easing.inOut(Easing.ease),
@@ -37,7 +37,7 @@ const Modal3 = ({ visible3, onClose }) => {
         <Animated.View 
             className='absolute flex-1 justify-center h-screen w-screen bg-green-400 mt-9 rounded-2xl'
             style={{
-                transform: [{ translateY: transY}]
+                transform: [{ translateY: transY.current }]
             }}
         >
             <View className='flex-1 justify-center items-center'>
