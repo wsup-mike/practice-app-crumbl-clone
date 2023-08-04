@@ -36,7 +36,7 @@ const Modal3 = ({ visible3, onClose }) => {
         <Animated.View 
             className='absolute flex-1 justify-center items-center h-full w-screen bg-green-400 mt-9 rounded-2xl'
             style={{
-                
+                width: width,
                 transform: [{ translateY: transY.current }]
             }}
         >
