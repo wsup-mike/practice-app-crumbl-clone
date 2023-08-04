@@ -51,7 +51,7 @@ const AnimatedModalsScreen = () => {
       <SafeAreaView 
         className='flex-1 items-center bg-indigo-400'
         style={{ 
-          // transform: [{ scale: .9 }]
+          transform: [{ scale: .9 }]
         }}
       >
         <Text className='text-center font-extralight text-3xl mt-3 text-white'>AnimatedModalsScreen</Text>
@@ -60,8 +60,8 @@ const AnimatedModalsScreen = () => {
           <Button title='Show Modal2' onPress={handleShowModal2}/>
           <Button title='Show Modal3' onPress={handleShowModal3}/>
         </View>
-        {/* <Modal1 visible={visible} onClose={handleCloseModal} />
-        <Modal2 visible={visible2} onClose={handleCloseModal2} /> */}
+        <Modal1 visible={visible} onClose={handleCloseModal} />
+        {/* <Modal2 visible={visible2} onClose={handleCloseModal2} />  */}
         <Modal3 visible={visible3} onClose={handleCloseModal3} />
       </SafeAreaView>
     </>
