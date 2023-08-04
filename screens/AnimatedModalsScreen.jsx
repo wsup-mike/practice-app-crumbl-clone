@@ -5,7 +5,6 @@ import Modal1 from './Modal1';
 import Modal2 from './Modal2';
 import Modal3 from './Modal3';
 
-
 const AnimatedModalsScreen = () => {
   const [visible, setVisible] = useState(false)
   const [visible2, setVisible2] = useState(false)
