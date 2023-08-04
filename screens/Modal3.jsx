@@ -1,13 +1,12 @@
 import { View, Text, SafeAreaView, Button, Animated, Dimensions, Easing } from 'react-native'
 import React , { useRef, useEffect }from 'react'
-import { useFocusEffect } from '@react-navigation/native';
 
 const Modal3 = ({ visible3, onClose }) => {
     // Destructure hieght from screen Dimensions
     const { height } = Dimensions.get('screen')
 
     // Create use Animated.Value for y axis starts at distance value 'height'
-    const transY = useRef(new Animated.Value(height)).current
+    const transY = useRef(new Animated.Value(height))
 
     // Handler in the Modal3 button to close the modal by changing state visible3 using the onClose
     const onPress = () => {
