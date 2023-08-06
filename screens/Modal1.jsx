@@ -1,6 +1,5 @@
-import { View, Text, Button, Dimensions, Animated } from 'react-native'
+import { View, Text, Button, Dimensions, Animated, Easing } from 'react-native'
 import React, { useEffect, useRef } from 'react'
-import { Easing } from 'react-native';
 
 const Modal1 = ({ onClose, visible }) => {
     
