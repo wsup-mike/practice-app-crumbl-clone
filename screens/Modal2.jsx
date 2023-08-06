@@ -10,6 +10,7 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
 
     // A useEffect runs on both: initial render + whenever 'visible' changes
     useEffect(() => {
+        console.log(width)
         if (visible2) {
             Animated.timing(transX.current, {
                 toValue: 0,
