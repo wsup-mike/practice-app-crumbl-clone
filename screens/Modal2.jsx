@@ -4,7 +4,7 @@ import { Easing } from 'react-native';
 
 const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n state 'visible2' 2 be used here
 
-    const { height, width } = Dimensions.get('screen') // get dimensions of user's existing screen height and width
+    const { width } = Dimensions.get('screen') // get dimensions of user's existing screen height and width
     
     const transX = useRef(new Animated.Value(width)) // 2 hold a new ref value named transX to animate on
 
@@ -36,8 +36,7 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
             <Animated.View
                 className='absolute items-center h-screen w-screen pt-5'
                 style={{
-                    
-                    transform: [{ translateX: transX.current }],
+                    // transform: [{ translateX: transX.current }],
                 }}
             >
                 <View 
