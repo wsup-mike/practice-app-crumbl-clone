@@ -6,20 +6,20 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
 
     const { width } = Dimensions.get('screen') // get dimensions of user's existing screen height and width
     
-    const transX = useRef(new Animated.Value(width)) // 2 hold a new ref value named transX to animate on
+    const transX = useRef(new Animated.Value(width)).current // 2 hold a new ref value named transX to animate on
 
     // A useEffect runs on both: initial render + whenever 'visible' changes
     useEffect(() => {
         console.log(width)
         if (visible2) {
-            Animated.timing(transX.current, {
+            Animated.timing(transX, {
                 toValue: 0,
                 duration: 225,
                 easing: Easing.inOut(Easing.ease),
                 useNativeDriver: true,
             }).start()
         } else {
-            Animated.timing(transX.current, {
+            Animated.timing(transX, {
                 toValue: width,
                 duration: 225,
                 easing: Easing.inOut(Easing.ease),
@@ -37,7 +37,7 @@ const Modal2 = ({ onClose, visible2 }) => { // Pass in from parent: handler n st
             <Animated.View
                 className='absolute items-center h-screen w-screen pt-5'
                 style={{
-                    transform: [{ translateX: transX.current }]
+                    transform: [{ translateX: transX }]
                 }}
             >
                 <View 
